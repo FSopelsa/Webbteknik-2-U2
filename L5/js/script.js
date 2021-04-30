@@ -44,7 +44,7 @@ window.addEventListener("load",init);
 // ------------------------------
 // Kontrollera tangenter och styr bilen
 function checkKey(e) {
-	let k = e.key;
+	let k = e.key; // Tangent som styr bilen
 	switch (k) {
 		case "ArrowLeft":
 		case "z":
