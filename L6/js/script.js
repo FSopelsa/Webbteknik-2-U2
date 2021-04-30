@@ -69,7 +69,7 @@ function calculateCost() {
 // ------------------------------
 // Ändrar det användaren skriver som ort till versaler
 function checkCity() {
-	var city = this.value;
+	var city = this.value; // Fältet där ort fylls i
 	city = city.toUpperCase();
 	this.value = city;
 } // End checkCity
@@ -101,17 +101,17 @@ function startCheckCampaign() {
 	this.select();
 } // End startCheckCampaign
 // ------------------------------
-//
+// Ändrar input till versaler och nollställer bakgrundsfärg för fältet
 function endCheckCampaign() {
 	this.style.backgroundColor = "";
-	var campaigncode = this.value;
+	var campaigncode = this.value; 				// Fält för att fylla i kampanjkod
 	campaigncode = campaigncode.toUpperCase();
 	this.value = campaigncode;
 } // End endCheckCampaign
 // ------------------------------
 // Kollar så att kampanjkoden är skriven korekt
 function checkCampaign() {
-	const re =
+	const re =									// Reguljärt uttryck för kampanjkod
 		/^[A-Z]{3}-\d{2}-[A-Z]{1}\d{1}$/i
 	;
 	if (re.test(this.value)) this.style.backgroundColor = "#6F9";
